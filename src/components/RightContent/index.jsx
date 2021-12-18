@@ -1,16 +1,15 @@
 import { Space, message } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import React from 'react';
-import { useModel, SelectLang } from 'umi';
+import { useModel } from 'umi';
 import Avatar from './AvatarDropdown';
 import HeaderSearch from '../HeaderSearch';
 import styles from './index.less';
 import NoticeIcon from '../NoticeIcon/NoticeIcon';
 
 const GlobalHeaderRight = () => {
-  const { initialState } = useModel('@@initialState');
+  const { initialState } = useModel('@@initialState'); // 测试useModel
 
-  // 测试useModel
   const list = useModel('demo');
 
   if (!initialState || !initialState.settings) {
